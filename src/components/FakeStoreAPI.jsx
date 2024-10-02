@@ -1,19 +1,42 @@
+import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 
-const fakeStoreAPI = async () => {
-  try {
-    const response = await fetch("https://fakestoreapi.com/products?limit=10");
+const FakeStore = () => {
+  const [products, setProducts] = useState([]);
 
-    if (!response.ok) {
-      throw new Error("Network response is not good...");
+  const fakeStoreAPI = async () => {
+    try {
+      const response = await fetch("https://fakestoreapi.com/products?limit=1");
+
+      if (!response.ok) {
+        throw new Error("Network response is not good...");
+      }
+
+      const data = await response.json();
+      //console.log(data);
+      setProducts(data);
+      console.log(products);
+    } catch (error) {
+      console.error("Error is:", error.message);
+      setProducts([]);
     }
+  };
+  useEffect(() => {
+    fakeStoreAPI();
+  }, []);
 
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error is:", error.message);
-    return [];
-  }
+  return (
+    <>
+      {products.map((id) => (
+        <ProductCard
+          key={id}
+          image={id.image}
+          title={id.title}
+          price={id.price}
+        />
+      ))}
+    </>
+  );
 };
 
-fakeStoreAPI();
+export default FakeStore;
