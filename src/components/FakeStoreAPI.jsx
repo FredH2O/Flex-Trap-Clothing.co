@@ -6,14 +6,14 @@ const FakeStore = () => {
 
   const fakeStoreAPI = async () => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products?limit=1");
+      const response = await fetch("https://fakestoreapi.com/products?limit=6");
 
       if (!response.ok) {
         throw new Error("Network response is not good...");
       }
 
       const data = await response.json();
-      //console.log(data);
+      console.log(data);
       setProducts(data);
       console.log(products);
     } catch (error) {
@@ -21,20 +21,26 @@ const FakeStore = () => {
       setProducts([]);
     }
   };
+
   useEffect(() => {
     fakeStoreAPI();
   }, []);
 
   return (
     <>
-      {products.map((id) => (
-        <ProductCard
-          key={id}
-          image={id.image}
-          title={id.title}
-          price={id.price}
-        />
-      ))}
+      {products.length > 0 ? (
+        products.map((product) => (
+          <ProductCard
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+          />
+        ))
+      ) : (
+        <p>No products to display...</p>
+      )}
     </>
   );
 };
