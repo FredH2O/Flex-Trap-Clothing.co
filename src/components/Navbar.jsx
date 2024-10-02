@@ -1,9 +1,15 @@
+import logo from "../images/flex-trap-logo.png";
+import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-4 px-lg-5">
         <a className="navbar-brand" href="#!">
-          Start Bootstrap
+          <img
+            src={logo}
+            className="logo img-thumbnail"
+            alt="Discounted Logo"
+          />
         </a>
         <button
           className="navbar-toggler"

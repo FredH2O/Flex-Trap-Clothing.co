@@ -1,6 +1,7 @@
+import "./ProductCard.css";
 export default function ProductCard({ image, title, price, description }) {
   return (
-    <div className="col mb-5">
+    <div id="card-container" className="col mb-5">
       <div className="card h-100">
         <img className="card-img-top" src={image} alt={title} />
         <div className="card-body p-4">
