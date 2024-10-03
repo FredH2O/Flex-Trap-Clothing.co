@@ -1,4 +1,4 @@
-import logo from "../images/flex-trap-logo.png";
+import logo from "../../images/flex-trap-logo.png";
 import "./Navbar.css";
 export default function Navbar() {
   return (

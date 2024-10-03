@@ -1,8 +1,10 @@
-import FakeStore from "./FakeStoreAPI";
+import FakeStore from "./../FakeStoreAPI/FakeStoreAPI";
+import SelectCategory from "../SelectCategory/SelectCategory";
 import "./Section.css";
 export default function Section() {
   return (
     <section className="py-5">
+      <SelectCategory />
       <div className="container px-4 px-lg-5 mt-5">
         <div
           id="card-container"

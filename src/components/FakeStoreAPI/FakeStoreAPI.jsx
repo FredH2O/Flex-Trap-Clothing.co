@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard/ProductCard";
 
 const FakeStore = () => {
   const [products, setProducts] = useState([]);
@@ -13,9 +13,9 @@ const FakeStore = () => {
       }
 
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       setProducts(data);
-      console.log(products);
+      //console.log(products);
     } catch (error) {
       console.error("Error is:", error.message);
       setProducts([]);

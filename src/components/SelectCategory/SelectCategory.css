@@ -1,0 +1,11 @@
+.category-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.form-select {
+  text-align: justify;
+  display: flex;
+  width: 150px !important;
+}
