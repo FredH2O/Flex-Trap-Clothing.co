@@ -1,8 +1,8 @@
-import { useState } from "react";
 import "./SelectCategory.css";
-const SelectCategory = () => {
-  const [category, setCategory] = useState("");
+
+const SelectCategory = ({ category, setCategory }) => {
   function handleSelectedCategory(e) {
+    console.log("Set Category:", setCategory);
     setCategory(e.target.value);
   }
 

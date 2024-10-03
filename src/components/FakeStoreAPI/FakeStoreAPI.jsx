@@ -1,30 +1,32 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 
-const FakeStore = () => {
+const FakeStore = ({ category }) => {
   const [products, setProducts] = useState([]);
 
   const fakeStoreAPI = async () => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products?limit=6");
+      const categoryPicked = category ? `category/${category}` : "products";
+      const response = await fetch(
+        `https://fakestoreapi.com/products/${categoryPicked}`
+      );
 
       if (!response.ok) {
         throw new Error("Network response is not good...");
       }
 
       const data = await response.json();
-      //console.log(data);
+      console.log(data);
       setProducts(data);
-      //console.log(products);
     } catch (error) {
       console.error("Error is:", error.message);
-      setProducts([]);
+      setProducts([]); // Reset products on error
     }
   };
 
   useEffect(() => {
     fakeStoreAPI();
-  }, []);
+  }, [category]);
 
   return (
     <>
