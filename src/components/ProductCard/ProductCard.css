@@ -1,4 +1,18 @@
 .card-img-top {
-  height: 500px;
+  height: 250px;
   object-fit: contain;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.price-tag {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  padding: 0.5rem;
+  margin: 0;
+  height: 250px;
+  overflow: auto;
 }
