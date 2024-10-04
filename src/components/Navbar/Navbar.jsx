@@ -1,5 +1,7 @@
 import logo from "../../images/flex-trap-logo.png";
 import "./Navbar.css";
+import SignIn from "./SignIn";
+
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -68,6 +70,9 @@ export default function Navbar() {
             </li>
           </ul>
           <form className="d-flex">
+            <button className="btn btn-outline-dark" type="button">
+              {<SignIn />}
+            </button>
             <button className="btn btn-outline-dark" type="submit">
               <i className="bi-cart-fill me-1"></i>
               Cart
