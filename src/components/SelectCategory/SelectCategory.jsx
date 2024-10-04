@@ -14,11 +14,10 @@ const SelectCategory = ({ category, setCategory }) => {
         value={category}
         onChange={handleSelectedCategory}
       >
-        <option value="">Category</option>
         <option value="electronics">Electronics</option>
         <option value="jewelery">Jewelery</option>
-        <option value="men's clothing">Men's Clothing</option>
-        <option value="women's clothing">Women's Clothing</option>
+        <option value="men's clothing">Men's</option>
+        <option value="women's clothing">Women's</option>
       </select>
     </div>
   );

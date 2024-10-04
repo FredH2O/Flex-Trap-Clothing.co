@@ -4,7 +4,7 @@ import "./Section.css";
 import { useState } from "react";
 
 export default function Section() {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("women's clothing");
 
   return (
     <section className="py-5">
