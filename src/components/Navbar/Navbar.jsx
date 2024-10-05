@@ -1,8 +1,14 @@
 import logo from "../../images/flex-trap-logo.png";
 import "./Navbar.css";
 import SignIn from "./SignIn";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [signIn, setSignIn] = useState(false);
+
+  function handleSignIn() {
+    setSignIn(!signIn);
+  }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container px-4 px-lg-5">
@@ -70,8 +76,12 @@ export default function Navbar() {
             </li>
           </ul>
           <form className="d-flex">
-            <button className="btn btn-outline-dark" type="button">
-              {<SignIn />}
+            <button
+              onClick={handleSignIn}
+              className="btn btn-outline-dark"
+              type="button"
+            >
+              {signIn ? "Close" : "Sign In"}
             </button>
             <button className="btn btn-outline-dark" type="submit">
               <i className="bi-cart-fill me-1"></i>
@@ -83,6 +93,7 @@ export default function Navbar() {
           </form>
         </div>
       </div>
+      {signIn ? <SignIn /> : ""}
     </nav>
   );
 }
