@@ -1,0 +1,9 @@
+.user-pass {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(19, 22, 19);
+  border-radius: 25px;
+  background-color: rgba(59, 53, 53, 0.671);
+}
