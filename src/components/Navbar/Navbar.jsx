@@ -7,7 +7,7 @@ export default function Navbar() {
   const [signIn, setSignIn] = useState(false);
 
   function handleSignIn() {
-    setSignIn(!signIn);
+    setSignIn((previous) => !previous);
   }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -93,7 +93,7 @@ export default function Navbar() {
           </form>
         </div>
       </div>
-      {signIn ? <SignIn /> : ""}
+      {signIn ? <SignIn signIn={signIn} /> : <SignIn signIn={signIn} />}
     </nav>
   );
 }

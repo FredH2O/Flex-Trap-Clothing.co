@@ -1,9 +1,15 @@
+import { useEffect, useState } from "react";
 import "./SignIn.css";
 
-export default function SignIn() {
+export default function SignIn({ signIn }) {
+  const [animate, setAnimate] = useState("animate__fadeInDown");
+
+  useEffect(() => {
+    setAnimate(signIn ? "animate__fadeInDown" : "animate__fadeOutUp");
+  }, [signIn]);
   return (
     <div className="user-pass">
-      <div className="holder-sign-in animate__animated animate__fadeInDown">
+      <div className={`holder-sign-in animate__animated ${animate}`}>
         <h2 className="sign-in-header">Sign In</h2>
         <div className="container">
           <div class="form-floating mb-3">

@@ -7,12 +7,25 @@ header {
   position: relative;
 }
 
+.carousel-item img {
+  filter: blur(2px);
+  object-fit: cover;
+  background-color: black;
+}
+
 .header-title {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 100;
-  color: rgb(246, 114, 25);
-  text-shadow: 1px 1px 1px gray;
+  z-index: 11;
+  color: rgba(246, 177, 131, 0.925);
+  text-shadow: 2px 1px 1px rgb(0, 0, 0);
+}
+
+.header-title h1 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
