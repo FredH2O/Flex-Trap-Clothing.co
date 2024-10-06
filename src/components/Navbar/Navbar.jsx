@@ -78,7 +78,7 @@ export default function Navbar() {
           <form className="d-flex">
             <button
               onClick={handleSignIn}
-              className="btn btn-outline-dark"
+              className={`btn ${signIn ? "btn-danger" : "btn-outline-dark"}`}
               type="button"
             >
               {signIn ? "Close" : "Sign In"}

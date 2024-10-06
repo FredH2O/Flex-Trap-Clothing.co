@@ -18,7 +18,7 @@
 }
 
 .holder-sign-in {
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: rgba(59, 53, 53, 0.671);
   width: 420px;
   text-align: center;
@@ -40,12 +40,6 @@
   border-radius: 10px;
 }
 
-.login-signup button:hover {
-  border: 1px solid rgb(155, 252, 157);
-  transform: translateY(-2px);
-  transition: 0.3s ease;
-}
-
 .login-signup a {
   font-size: 1.1rem;
   color: aquamarine;
@@ -54,5 +48,5 @@
 }
 
 .login-signup a:hover {
-  color: rgb(255, 127, 127);
+  color: rgb(58, 188, 46) !important;
 }
