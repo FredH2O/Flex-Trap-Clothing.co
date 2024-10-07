@@ -1,6 +1,6 @@
 header {
   position: relative;
-  margin-top: 77px;
+  margin-top: 100px;
 }
 
 .carousel-item {
@@ -8,9 +8,8 @@ header {
 }
 
 .carousel-item img {
-  filter: blur(2px);
+  filter: blur(3px);
   object-fit: cover;
-  background-color: black;
 }
 
 .header-title {

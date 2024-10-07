@@ -5,9 +5,18 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [signIn, setSignIn] = useState(false);
+  const [showSignIn, setShowSignIn] = useState(false);
 
   function handleSignIn() {
-    setSignIn((previous) => !previous);
+    if (signIn) {
+      setSignIn(false);
+      setTimeout(() => {
+        setShowSignIn(false);
+      }, 700);
+    } else {
+      setShowSignIn(true);
+      setSignIn(true);
+    }
   }
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -93,7 +102,7 @@ export default function Navbar() {
           </form>
         </div>
       </div>
-      {signIn ? <SignIn signIn={signIn} /> : <SignIn signIn={signIn} />}
+      {showSignIn ? <SignIn signIn={signIn} /> : ""}
     </nav>
   );
 }

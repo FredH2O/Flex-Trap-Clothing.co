@@ -13,11 +13,11 @@ export default function HeroImages() {
           {imagesData.map((image, index) => (
             <div
               key={index}
-              className={`carousel-item ${index === 0 ? "active" : ""} `}
+              className={`carousel-item  ${index === 0 ? "active" : ""} `}
             >
               <img
                 src={require(`../../images/${image.src}`)}
-                className="d-block hero-image"
+                className="d-block hero-image img-fluid"
                 alt={image.alt}
               />
               <div className="header-title">
