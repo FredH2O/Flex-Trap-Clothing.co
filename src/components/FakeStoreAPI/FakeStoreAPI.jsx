@@ -6,9 +6,11 @@ const FakeStore = ({ category }) => {
 
   const fakeStoreAPI = async () => {
     try {
-      const categoryPicked = category ? `category/${category}` : "products";
+      const categoryPicked = category
+        ? `products/category/${category}`
+        : "products";
       const response = await fetch(
-        `https://fakestoreapi.com/products/${categoryPicked}`
+        `https://fakestoreapi.com/${categoryPicked}`
       );
 
       if (!response.ok) {

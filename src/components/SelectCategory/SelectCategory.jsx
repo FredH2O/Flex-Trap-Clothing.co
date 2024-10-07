@@ -14,6 +14,7 @@ const SelectCategory = ({ category, setCategory }) => {
         value={category}
         onChange={handleSelectedCategory}
       >
+        <option value="">All products</option>
         <option value="electronics">Electronics</option>
         <option value="jewelery">Jewelery</option>
         <option value="men's clothing">Men's</option>
