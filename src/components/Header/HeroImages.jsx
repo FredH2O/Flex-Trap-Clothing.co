@@ -21,7 +21,7 @@ export default function HeroImages() {
                 alt={image.alt}
               />
               <div className="header-title">
-                <h1 className="display-4 fw-bolder">Shopping made easy</h1>
+                <h1 className="display-4 fw-bolder">Shopping made easy.</h1>
                 <p className="lead fw-normal text-white-50 mb-0">
                   Shop till you drop !
                 </p>
@@ -36,7 +36,7 @@ export default function HeroImages() {
           data-bs-slide="prev"
         >
           <span
-            className="carousel-control-prev-icon"
+            className="carousel-control-prev-icon visually-hidden"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Previous</span>
@@ -48,7 +48,7 @@ export default function HeroImages() {
           data-bs-slide="next"
         >
           <span
-            className="carousel-control-next-icon"
+            className="carousel-control-next-icon visually-hidden"
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Next</span>
