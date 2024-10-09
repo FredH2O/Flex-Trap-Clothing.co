@@ -6,7 +6,7 @@ export default function HeroImages() {
     <>
       <div
         id="carouselExampleFade"
-        className="carousel slide carousel-fade"
+        className="container carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner">

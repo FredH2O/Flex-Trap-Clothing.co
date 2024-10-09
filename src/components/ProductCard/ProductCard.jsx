@@ -2,7 +2,12 @@ import "./ProductCard.css";
 
 export default function ProductCard({ image, title, price, description }) {
   return (
-    <div id="card-container" className="col mb-5">
+    <div
+      id="card-container"
+      data-aos="fade-down"
+      data-aos-easing="ease-in-out"
+      className="col mb-5"
+    >
       <div className="card h-100">
         <img className="card-img-top" src={image} alt={title} />
         <div className="card-body p-4">

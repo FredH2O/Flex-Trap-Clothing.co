@@ -3,6 +3,12 @@ header {
   margin-top: 100px;
 }
 
+.carousel-inner {
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 .carousel-item {
   position: relative;
 }
