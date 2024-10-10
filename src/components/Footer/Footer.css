@@ -1,3 +1,23 @@
 footer {
   color: white;
+  background-color: rgb(19, 19, 44);
+}
+
+.list-group-item li {
+  color: white;
+  background-color: transparent;
+  border: none; /* Optional: removes borders as well */
+}
+
+.col-12 li {
+  color: white;
+}
+
+.col-12 li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.col-12 li a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }

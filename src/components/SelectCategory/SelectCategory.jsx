@@ -12,6 +12,7 @@ const SelectCategory = ({ category, setCategory }) => {
         className="form-select"
         aria-label="Default select example"
         value={category}
+        onChange={handleSelectedCategory}
       >
         <option value="">All products</option>
         <option value="electronics">Electronics</option>
