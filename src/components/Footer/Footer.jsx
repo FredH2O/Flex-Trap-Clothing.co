@@ -54,6 +54,7 @@ export default function Footer() {
             <h5 className="text-white">Follow Us</h5>
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0">
+                <i class="bi bi-twitter"></i>&nbsp;
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -63,6 +64,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
+                <i class="bi bi-facebook"></i>&nbsp;
                 <a
                   href="https://facebook.com"
                   target="_blank"
@@ -72,6 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
+                <i class="bi bi-instagram"></i>&nbsp;
                 <a
                   href="https://instagram.com"
                   target="_blank"
@@ -81,6 +84,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
+                <i class="bi bi-linkedin"></i>&nbsp;
                 <a
                   href="https://linkedin.com"
                   target="_blank"
@@ -92,7 +96,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <p className="m-0 text-center text-white">
+        <p className="m-0 pt-5 text-center text-white">
           Copyright &copy;
           <a href="https://github.com/FredH2O" target="_blank">
             FredH2O / 2024

@@ -10,6 +10,7 @@ import "animate.css";
 import "@fontsource/playfair-display";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 AOS.init();
 

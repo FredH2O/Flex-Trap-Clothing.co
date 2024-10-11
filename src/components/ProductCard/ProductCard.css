@@ -13,6 +13,11 @@
 .description {
   padding: 0.5rem;
   margin: 0;
-  height: 250px;
+  height: 27vh;
   overflow: auto;
+  font-size: smaller;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -16,7 +16,7 @@ export default function HeroImages() {
               className={`carousel-item  ${index === 0 ? "active" : ""} `}
             >
               <img
-                src={require(`../../images/${image.src}`)}
+                src={process.env.PUBLIC_URL + `/images/${image.src}`}
                 className="d-block hero-image img-fluid"
                 alt={image.alt}
               />
