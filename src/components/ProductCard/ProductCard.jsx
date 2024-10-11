@@ -1,6 +1,12 @@
 import "./ProductCard.css";
 
-export default function ProductCard({ image, title, price, description }) {
+export default function ProductCard({
+  image,
+  title,
+  price,
+  description,
+  addProduct,
+}) {
   return (
     <div
       id="card-container"
@@ -19,9 +25,9 @@ export default function ProductCard({ image, title, price, description }) {
         </div>
         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
           <div className="text-center">
-            <a className="btn btn-outline-dark mt-auto" href="#">
-              Add to cart
-            </a>
+            <button onClick={addProduct} type="button" class="btn btn-success">
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>

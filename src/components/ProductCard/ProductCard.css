@@ -1,5 +1,5 @@
 .card-img-top {
-  height: 250px;
+  height: 21vh;
   object-fit: contain;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -16,7 +16,6 @@
   height: 27vh;
   overflow: auto;
   font-size: smaller;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;

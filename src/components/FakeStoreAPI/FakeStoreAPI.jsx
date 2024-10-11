@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 
-const FakeStore = ({ category }) => {
+const FakeStore = ({ category, onAddToCart }) => {
   const [products, setProducts] = useState([]);
 
   const fakeStoreAPI = async () => {
@@ -40,6 +40,7 @@ const FakeStore = ({ category }) => {
             title={product.title}
             price={product.price}
             description={product.description}
+            addProduct={() => onAddToCart(product)}
           />
         ))
       ) : (

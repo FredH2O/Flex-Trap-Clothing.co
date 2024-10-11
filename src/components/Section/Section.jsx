@@ -3,7 +3,7 @@ import SelectCategory from "../SelectCategory/SelectCategory";
 import "./Section.css";
 import { useState } from "react";
 
-export default function Section() {
+export default function Section({ onAddToCart }) {
   const [category, setCategory] = useState("");
 
   return (
@@ -14,7 +14,7 @@ export default function Section() {
           id="card-container"
           className="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center"
         >
-          <FakeStore category={category} />
+          <FakeStore category={category} onAddToCart={onAddToCart} />
         </div>
       </div>
     </section>

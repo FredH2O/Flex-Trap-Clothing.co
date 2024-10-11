@@ -4,11 +4,11 @@
   top: 0;
   width: 100%;
   z-index: 100;
-  border-bottom: 1px solid rgba(44, 40, 40, 0.648);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .nav-item span {
-  color: red;
+  color: rgb(221, 41, 41);
   font-style: italic;
 }
 
