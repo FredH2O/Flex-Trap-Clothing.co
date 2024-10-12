@@ -5,9 +5,14 @@ import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ cart }) {
   const [signIn, setSignIn] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
+  const [showCart, setShowCart] = useState(false);
+
+  function handleCartClick() {
+    setShowCart((prevState) => !prevState);
+  }
 
   function handleSignIn() {
     if (signIn) {
@@ -68,17 +73,57 @@ export default function Navbar() {
               >
                 {signIn ? "Close" : "Sign In"}
               </button>
-              <button className="btn btn-outline-dark" type="submit">
+              <button
+                className="btn btn-outline-dark animate__animated animate__bounce"
+                type="button"
+                onClick={handleCartClick}
+              >
                 <i className="bi-cart-fill me-1"></i>
                 Cart
                 <span className="badge bg-dark text-white ms-1 rounded-pill">
-                  0
+                  {cart.length}
                 </span>
               </button>
             </form>
           </div>
         </div>
         {showSignIn ? <SignIn signIn={signIn} /> : ""}
+        {showCart && (
+          <div className="modal d-block animate__animated animate__slideInDown">
+            <div className="modal-dialog modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel">
+                    Cart
+                  </h1>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    onClick={handleCartClick}
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  {cart.length === 0 ? (
+                    <p>Your cart is empty!! Want to buy something? 😊</p>
+                  ) : (
+                    <ul>
+                      {cart.map((item, index) => (
+                        <li key={index}>
+                          {item.title} - €{item.price}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-primary">
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );

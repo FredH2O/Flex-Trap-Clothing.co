@@ -40,7 +40,9 @@ const FakeStore = ({ category, onAddToCart }) => {
             title={product.title}
             price={product.price}
             description={product.description}
-            addProduct={() => onAddToCart(product)}
+            addProduct={() =>
+              onAddToCart({ title: product.title, price: product.price })
+            }
           />
         ))
       ) : (
