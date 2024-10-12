@@ -3,16 +3,27 @@ import FakeStore from "../FakeStoreAPI/FakeStoreAPI";
 import SelectCategory from "../SelectCategory/SelectCategory";
 import "./Navbar.css";
 import SignIn from "./SignIn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar({ cart }) {
   const [signIn, setSignIn] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   function handleCartClick() {
     setShowCart((prevState) => !prevState);
   }
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      setAnimate(true);
+      const timer = setTimeout(() => {
+        setAnimate(false);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [cart]);
 
   function handleSignIn() {
     if (signIn) {
@@ -74,7 +85,9 @@ export default function Navbar({ cart }) {
                 {signIn ? "Close" : "Sign In"}
               </button>
               <button
-                className="btn btn-outline-dark animate__animated animate__bounce"
+                className={`btn btn-outline-dark ${
+                  animate ? "animate__animated animate__fadeIn" : ""
+                }`}
                 type="button"
                 onClick={handleCartClick}
               >
