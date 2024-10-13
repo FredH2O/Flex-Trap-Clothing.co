@@ -20,7 +20,7 @@ export default function Navbar({ cart }) {
       setAnimate(true);
       const timer = setTimeout(() => {
         setAnimate(false);
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [cart]);
@@ -36,6 +36,12 @@ export default function Navbar({ cart }) {
       setSignIn(true);
     }
   }
+
+  const totalPrice = cart.reduce(
+    (total, itemSelected) => total + itemSelected.price,
+    0
+  );
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -119,9 +125,9 @@ export default function Navbar({ cart }) {
                   {cart.length === 0 ? (
                     <p>Your cart is empty!! Want to buy something? 😊</p>
                   ) : (
-                    <ul>
+                    <ul className="list-group list-group-flush">
                       {cart.map((item, index) => (
-                        <li key={index}>
+                        <li className="list-group-item" key={index}>
                           {item.title} - €{item.price}
                         </li>
                       ))}
@@ -129,6 +135,7 @@ export default function Navbar({ cart }) {
                   )}
                 </div>
                 <div className="modal-footer">
+                  <p className="total-price">Total: € {totalPrice}</p>
                   <button type="button" className="btn btn-primary">
                     Checkout
                   </button>
