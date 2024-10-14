@@ -15,7 +15,7 @@ function App() {
   console.log(cart);
   return (
     <>
-      <Navbar cart={cart} />
+      <Navbar cart={cart} setCart={setCart} />
       <Header />
       <Section onAddToCart={handleAddToCart} />
       <Footer />

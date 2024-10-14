@@ -1,11 +1,9 @@
 import logo from "../../images/flex-trap-logo.png";
-import FakeStore from "../FakeStoreAPI/FakeStoreAPI";
-import SelectCategory from "../SelectCategory/SelectCategory";
 import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
 
-export default function Navbar({ cart }) {
+export default function Navbar({ cart, setCart }) {
   const [signIn, setSignIn] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const [showCart, setShowCart] = useState(false);
@@ -13,6 +11,11 @@ export default function Navbar({ cart }) {
 
   function handleCartClick() {
     setShowCart((prevState) => !prevState);
+  }
+
+  function removeCartItem(itemToBeRemoved) {
+    const newCart = cart.filter((_, index) => index !== itemToBeRemoved);
+    setCart(newCart);
   }
 
   useEffect(() => {
@@ -123,11 +126,18 @@ export default function Navbar({ cart }) {
                 </div>
                 <div className="modal-body">
                   {cart.length === 0 ? (
-                    <p>Your cart is empty!! Want to buy something? 😊</p>
+                    <p>Your cart is empty.</p>
                   ) : (
                     <ul className="list-group list-group-flush">
                       {cart.map((item, index) => (
                         <li className="list-group-item" key={index}>
+                          <button
+                            type="button"
+                            className="btn btn-danger"
+                            onClick={() => removeCartItem(index)}
+                          >
+                            X
+                          </button>
                           {item.title} - €{item.price}
                         </li>
                       ))}
@@ -135,7 +145,9 @@ export default function Navbar({ cart }) {
                   )}
                 </div>
                 <div className="modal-footer">
-                  <p className="total-price">Total: € {totalPrice}</p>
+                  <p className="total-price">
+                    Total: € {totalPrice.toFixed(2)}
+                  </p>
                   <button type="button" className="btn btn-primary">
                     Checkout
                   </button>
