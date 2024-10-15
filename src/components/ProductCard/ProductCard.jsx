@@ -25,7 +25,11 @@ export default function ProductCard({
         </div>
         <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
           <div className="text-center">
-            <button onClick={addProduct} type="button" class="btn btn-success">
+            <button
+              onClick={addProduct}
+              type="button"
+              className="btn btn-success"
+            >
               Add to Cart
             </button>
           </div>

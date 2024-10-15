@@ -12,19 +12,19 @@ export default function SignIn({ signIn }) {
       <div className={`holder-sign-in animate__animated ${animate}`}>
         <h2 className="sign-in-header">Sign In</h2>
         <div className="container">
-          <div class="form-floating mb-3">
+          <div className="form-floating mb-3">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="floatingInput"
               placeholder="name@example.com"
             />
             <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-floating">
+          <div className="form-floating">
             <input
               type="password"
-              class="form-control"
+              className="form-control"
               id="floatingPassword"
               placeholder="Password"
             />

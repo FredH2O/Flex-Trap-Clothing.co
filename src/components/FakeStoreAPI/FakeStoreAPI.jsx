@@ -18,11 +18,10 @@ const FakeStore = ({ category, onAddToCart }) => {
       }
 
       const data = await response.json();
-      console.log(data);
       setProducts(data);
     } catch (error) {
       console.error("Error is:", error.message);
-      setProducts([]); // Reset products on error
+      setProducts([]);
     }
   };
 
@@ -41,7 +40,11 @@ const FakeStore = ({ category, onAddToCart }) => {
             price={product.price}
             description={product.description}
             addProduct={() =>
-              onAddToCart({ title: product.title, price: product.price })
+              onAddToCart({
+                id: product.id,
+                title: product.title,
+                price: product.price,
+              })
             }
           />
         ))

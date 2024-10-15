@@ -12,6 +12,13 @@
   font-style: italic;
 }
 
+.list-group button {
+  margin-right: 10px;
+  border-radius: 50px;
+  padding: 1px 3px 1px 3px;
+  font-size: x-small;
+}
+
 .total-price {
   font-weight: bold;
   font-style: italic;

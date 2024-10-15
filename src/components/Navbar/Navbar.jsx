@@ -2,6 +2,7 @@ import logo from "../../images/flex-trap-logo.png";
 import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
+import { v4 as uuidv45 } from "uuid";
 
 export default function Navbar({ cart, setCart }) {
   const [signIn, setSignIn] = useState(false);
@@ -41,7 +42,7 @@ export default function Navbar({ cart, setCart }) {
   }
 
   const totalPrice = cart.reduce(
-    (total, itemSelected) => total + itemSelected.price,
+    (total, itemSelected) => total + itemSelected.price * itemSelected.quantity,
     0
   );
 
@@ -111,7 +112,7 @@ export default function Navbar({ cart, setCart }) {
         </div>
         {showSignIn ? <SignIn signIn={signIn} /> : ""}
         {showCart && (
-          <div className="modal d-block animate__animated animate__slideInDown">
+          <div className="modal d-block animate__animated animate__bounceIn">
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
@@ -130,13 +131,16 @@ export default function Navbar({ cart, setCart }) {
                   ) : (
                     <ul className="list-group list-group-flush">
                       {cart.map((item, index) => (
-                        <li className="list-group-item" key={index}>
+                        <li
+                          className="list-group-item animate__animated animate__bounceIn"
+                          key={index}
+                        >
                           <button
                             type="button"
                             className="btn btn-danger"
                             onClick={() => removeCartItem(index)}
                           >
-                            X
+                            <i className="bi bi-x"></i>
                           </button>
                           {item.title} - €{item.price}
                         </li>
@@ -148,7 +152,10 @@ export default function Navbar({ cart, setCart }) {
                   <p className="total-price">
                     Total: € {totalPrice.toFixed(2)}
                   </p>
-                  <button type="button" className="btn btn-primary">
+                  <button
+                    type="button"
+                    className="btn btn-primary animate__animated animate__bounceIn"
+                  >
                     Checkout
                   </button>
                 </div>

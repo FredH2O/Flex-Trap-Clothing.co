@@ -54,7 +54,7 @@ export default function Footer() {
             <h5 className="text-white">Follow Us</h5>
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0">
-                <i class="bi bi-twitter"></i>&nbsp;
+                <i className="bi bi-twitter"></i>&nbsp;
                 <a
                   href="https://twitter.com"
                   target="_blank"
@@ -64,7 +64,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <i class="bi bi-facebook"></i>&nbsp;
+                <i className="bi bi-facebook"></i>&nbsp;
                 <a
                   href="https://facebook.com"
                   target="_blank"
@@ -74,7 +74,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <i class="bi bi-instagram"></i>&nbsp;
+                <i className="bi bi-instagram"></i>&nbsp;
                 <a
                   href="https://instagram.com"
                   target="_blank"
@@ -84,7 +84,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <i class="bi bi-linkedin"></i>&nbsp;
+                <i className="bi bi-linkedin"></i>&nbsp;
                 <a
                   href="https://linkedin.com"
                   target="_blank"
