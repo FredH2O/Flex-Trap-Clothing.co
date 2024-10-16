@@ -9,15 +9,15 @@ export default function HeroImages() {
         className="container carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner">
+        <div className="carousel-inner img-container">
           {imagesData.map((image, index) => (
             <div
               key={index}
-              className={`carousel-item  ${index === 0 ? "active" : ""} `}
+              className={`carousel-item   ${index === 0 ? "active" : ""} `}
             >
               <img
                 src={process.env.PUBLIC_URL + `/images/${image.src}`}
-                className="d-block hero-image img-fluid"
+                className="d-block hero-image"
                 alt={image.alt}
               />
               <div className="header-title">

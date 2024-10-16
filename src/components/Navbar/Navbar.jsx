@@ -1,8 +1,8 @@
 import logo from "../../images/flex-trap-logo.png";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
-import { v4 as uuidv45 } from "uuid";
 
 export default function Navbar({ cart, setCart }) {
   const [signIn, setSignIn] = useState(false);
@@ -71,14 +71,14 @@ export default function Navbar({ cart, setCart }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#home">
+                <Link className="nav-link active" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#!">
-                  About
-                </a>
+                <Link className="nav-link" to="/about">
+                  About Us
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#!">
