@@ -15,8 +15,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <Link to="/contact" className="text-decoration-none">
-                  Contact
+                <Link to="/contacts" className="text-decoration-none">
+                  Contacts
                 </Link>
               </li>
               <li className="list-group-item bg-transparent border-0">
@@ -40,7 +40,7 @@ export default function Footer() {
                   href="mailto:info@example.com"
                   className="text-decoration-none"
                 >
-                  info@example.com
+                  flex-trap@clothing.ie
                 </a>
               </li>
               <li className="list-group-item bg-transparent border-0">
@@ -98,7 +98,6 @@ export default function Footer() {
           </div>
         </div>
         <p className="m-0 pt-5 text-center text-white">
-          Copyright &copy;
           <a href="https://github.com/FredH2O" target="_blank">
             FredH2O / 2024
           </a>

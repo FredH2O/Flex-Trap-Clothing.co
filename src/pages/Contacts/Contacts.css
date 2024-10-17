@@ -1,0 +1,9 @@
+.contacts {
+  margin-top: 4rem;
+  flex: 1;
+  padding: 2px;
+}
+
+.rounded {
+  filter: blur(1px);
+}
