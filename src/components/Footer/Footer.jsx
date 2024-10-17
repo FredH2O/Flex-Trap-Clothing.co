@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 export default function Footer() {
@@ -9,24 +10,24 @@ export default function Footer() {
             <h5 className="text-white">Quick Links</h5>
             <ul className="list-group">
               <li className="list-group-item bg-transparent border-0">
-                <a href="/about" className="text-decoration-none">
+                <Link to="/about" className="text-decoration-none">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <a href="/contact" className="text-decoration-none">
+                <Link to="/contact" className="text-decoration-none">
                   Contact
-                </a>
+                </Link>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <a href="/terms" className="text-decoration-none">
+                <Link to="/terms" className="text-decoration-none">
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li className="list-group-item bg-transparent border-0">
-                <a href="/privacy" className="text-decoration-none">
+                <Link to="/Privacy" className="text-decoration-none">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

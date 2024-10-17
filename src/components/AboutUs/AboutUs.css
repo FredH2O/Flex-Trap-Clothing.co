@@ -11,6 +11,10 @@
   padding: 2px;
 }
 
+.rounded {
+  filter: blur(0.5px);
+}
+
 @media screen and (max-width: 480px) {
   .about-us {
     display: flex;
