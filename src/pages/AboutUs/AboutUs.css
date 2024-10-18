@@ -10,7 +10,7 @@
   padding: 2px;
 }
 
-.rounded {
+.blur {
   filter: blur(0.5px);
 }
 

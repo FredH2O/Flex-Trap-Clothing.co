@@ -117,9 +117,7 @@ export default function Navbar({ cart, setCart }) {
             <div className="modal-dialog modal-dialog-centered">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                    Cart
-                  </h1>
+                  <h1 className="modal-title fs-5">Cart</h1>
                   <button
                     type="button"
                     className="btn-close"

@@ -6,7 +6,7 @@ function Contacts() {
       <div className="row">
         <div className="col-lg-6">
           <img
-            className="img-fluid rounded mb-5"
+            className="img-fluid contacts-img mb-5"
             src={`${process.env.PUBLIC_URL}/images/flex-trap-model2.jpg`}
             alt=""
           />

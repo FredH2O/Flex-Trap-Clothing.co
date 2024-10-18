@@ -5,15 +5,15 @@ export default function HeroImages() {
   return (
     <>
       <div
-        id="carouselExampleFade"
         className="container carousel slide carousel-fade"
+        id="carouselFade"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner img-container rounded">
           {imagesData.map((image, index) => (
             <div
               key={index}
-              className={`carousel-item   ${index === 0 ? "active" : ""} `}
+              className={`carousel-item ${index === 0 ? "active" : ""} `}
             >
               <img
                 src={process.env.PUBLIC_URL + `/images/${image.src}`}
@@ -32,7 +32,7 @@ export default function HeroImages() {
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleFade"
+          data-bs-target="#carouselFade"
           data-bs-slide="prev"
         >
           <span
@@ -44,7 +44,7 @@ export default function HeroImages() {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleFade"
+          data-bs-target="#carouselFade"
           data-bs-slide="next"
         >
           <span
