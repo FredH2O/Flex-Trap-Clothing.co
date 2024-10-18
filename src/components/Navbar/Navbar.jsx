@@ -41,10 +41,11 @@ export default function Navbar({ cart, setCart }) {
     }
   }
 
-  const totalPrice = cart.reduce(
-    (total, itemSelected) => total + itemSelected.price * itemSelected.quantity,
-    0
-  );
+  const totalPrice = cart.reduce((total, itemSelected) => {
+    const normalItem = Number(itemSelected.price) || 0;
+    const saleItem = Number(itemSelected.newPrice) || 0;
+    return total + normalItem + saleItem;
+  }, 0);
 
   return (
     <>
@@ -142,7 +143,8 @@ export default function Navbar({ cart, setCart }) {
                           >
                             <i className="bi bi-x"></i>
                           </button>
-                          {item.title} - €{item.price}
+                          {item.title} - €
+                          {`${item.price ? item.price : item.newPrice}`}
                         </li>
                       ))}
                     </ul>
