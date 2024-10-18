@@ -81,9 +81,9 @@ export default function Navbar({ cart, setCart }) {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#!">
+                <Link className="nav-link" to="/sale">
                   <span>Sale</span>
-                </a>
+                </Link>
               </li>
             </ul>
             <form className="d-flex">
