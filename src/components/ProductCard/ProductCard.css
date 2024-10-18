@@ -20,3 +20,16 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 480px) {
+  .description {
+    padding: 0.5rem;
+    margin: 0;
+    height: 25vh;
+    overflow: auto;
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

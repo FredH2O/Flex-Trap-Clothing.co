@@ -9,7 +9,7 @@ export default function HeroImages() {
         className="container carousel slide carousel-fade"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner img-container">
+        <div className="carousel-inner img-container rounded">
           {imagesData.map((image, index) => (
             <div
               key={index}

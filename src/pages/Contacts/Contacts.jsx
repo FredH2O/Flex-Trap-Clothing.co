@@ -71,7 +71,7 @@ function Contacts() {
               <textarea
                 className="form-control"
                 id="textArea"
-                rows="3"
+                rows="5"
                 maxLength="120"
               ></textarea>
             </div>
