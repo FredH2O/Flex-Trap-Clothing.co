@@ -3,7 +3,7 @@ import "./Sale.css";
 
 function Sale({ addProduct }) {
   return (
-    <div className="container px-4 px-lg-5 mt-5">
+    <div className="container px-4 px-lg-5 mt-5 pt-5">
       <div
         id="card-container"
         data-aos="fade-down"
