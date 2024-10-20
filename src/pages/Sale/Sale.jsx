@@ -1,7 +1,7 @@
 import saleProducts from "./saleProduct";
 import "./Sale.css";
 
-function Sale({ addProduct }) {
+function Sale({ onAddToCart }) {
   return (
     <div className="container px-4 px-lg-5 mt-5 pt-5">
       <div
@@ -34,7 +34,7 @@ function Sale({ addProduct }) {
               <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div className="text-center">
                   <button
-                    onClick={() => addProduct(item)}
+                    onClick={() => onAddToCart(item)}
                     type="button"
                     className="btn btn-success"
                   >

@@ -1,0 +1,12 @@
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.delivery-time {
+  font-weight: bold;
+  font-size: large;
+}

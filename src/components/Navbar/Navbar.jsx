@@ -137,7 +137,7 @@ export default function Navbar({ cart, setCart }) {
                           <button
                             type="button"
                             className="btn btn-danger"
-                            onClick={() => setCart([])}
+                            onClick={() => removeCartItem(index)}
                           >
                             <i className="bi bi-x"></i>
                           </button>
@@ -152,15 +152,22 @@ export default function Navbar({ cart, setCart }) {
                   <p className="total-price">
                     Total: € {totalPrice.toFixed(2)}
                   </p>
-                  <Link to="/checkout">
-                    <button
-                      type="button"
-                      onClick={() => setCart([])}
-                      className="btn btn-primary animate__animated animate__bounceIn"
-                    >
-                      Checkout
+                  {cart.length === 0 ? (
+                    <button className="btn custom-cursor btn-outline-secondary animate__animated animate__bounceIn disabled">
+                      <i class="bi bi-ban"></i>
                     </button>
-                  </Link>
+                  ) : (
+                    <Link to="/thankyou">
+                      <button
+                        type="button"
+                        disabled={cart.length === 0}
+                        onClick={() => setCart([])}
+                        className="btn btn-primary animate__animated animate__bounceIn"
+                      >
+                        Checkout
+                      </button>
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
