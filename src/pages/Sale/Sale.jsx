@@ -1,7 +1,9 @@
 import saleProducts from "./saleProduct";
 import "./Sale.css";
+import { shuffle } from "lodash";
 
 function Sale({ onAddToCart }) {
+  const shuffledProducts = shuffle(saleProducts);
   return (
     <div className="container px-4 px-lg-5 mt-5 pt-5">
       <div
@@ -10,7 +12,7 @@ function Sale({ onAddToCart }) {
         data-aos-easing="ease-in-out"
         className="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-3 justify-content-center"
       >
-        {saleProducts.map((item, index) => (
+        {shuffledProducts.map((item, index) => (
           <div
             id="card-container"
             data-aos="fade-down"
