@@ -161,7 +161,10 @@ export default function Navbar({ cart, setCart }) {
                       <button
                         type="button"
                         disabled={cart.length === 0}
-                        onClick={() => setCart([])}
+                        onClick={() => {
+                          setCart([]);
+                          handleCartClick();
+                        }}
                         className="btn btn-primary animate__animated animate__bounceIn"
                       >
                         Checkout

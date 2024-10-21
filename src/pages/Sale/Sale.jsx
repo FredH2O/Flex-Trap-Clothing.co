@@ -1,9 +1,12 @@
 import saleProducts from "./saleProduct";
 import "./Sale.css";
 import { shuffle } from "lodash";
-
+import { useState, useEffect, useLayoutEffect } from "react";
 function Sale({ onAddToCart }) {
-  const shuffledProducts = shuffle(saleProducts);
+  const [shuffledProducts, setShuffledProducts] = useState([]);
+  useEffect(() => {
+    setShuffledProducts(shuffle(saleProducts));
+  }, []);
   return (
     <div className="container px-4 px-lg-5 mt-5 pt-5">
       <div

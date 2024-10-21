@@ -73,7 +73,7 @@ const saleProducts = [
   },
   {
     image: `${process.env.PUBLIC_URL}/images/sale10.jpeg`,
-    title: "Winter Gloves",
+    title: "PTERO'S Winter Gloves",
     oldPrice: "9.99",
     newPrice: "2.99",
     description:
