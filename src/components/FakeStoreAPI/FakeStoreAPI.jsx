@@ -4,28 +4,27 @@ import ProductCard from "../ProductCard/ProductCard";
 const FakeStore = ({ category, onAddToCart }) => {
   const [products, setProducts] = useState([]);
 
-  const fakeStoreAPI = async () => {
-    try {
-      const categoryPicked = category
-        ? `products/category/${category}`
-        : "products";
-      const response = await fetch(
-        `https://fakestoreapi.com/${categoryPicked}`
-      );
-
-      if (!response.ok) {
-        throw new Error("Network response is not good...");
-      }
-
-      const data = await response.json();
-      setProducts(data);
-    } catch (error) {
-      console.error("Error is:", error.message);
-      setProducts([]);
-    }
-  };
-
   useEffect(() => {
+    const fakeStoreAPI = async () => {
+      try {
+        const categoryPicked = category
+          ? `products/category/${category}`
+          : "products";
+        const response = await fetch(
+          `https://fakestoreapi.com/${categoryPicked}`
+        );
+
+        if (!response.ok) {
+          throw new Error("Network response is not good...");
+        }
+
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error is:", error.message);
+        setProducts([]);
+      }
+    };
     fakeStoreAPI();
   }, [category]);
 

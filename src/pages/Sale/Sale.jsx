@@ -1,7 +1,7 @@
 import saleProducts from "./saleProduct";
 import "./Sale.css";
 import { shuffle } from "lodash";
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 function Sale({ onAddToCart }) {
   const [shuffledProducts, setShuffledProducts] = useState([]);
   useEffect(() => {

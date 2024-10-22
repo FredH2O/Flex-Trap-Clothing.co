@@ -27,11 +27,7 @@ export default function AboutUs() {
             </p>
           </div>
           <div className="col-lg-6">
-            <img
-              src={aboutUs}
-              alt="Shop Image"
-              className="img-fluid rounded blur"
-            />
+            <img src={aboutUs} alt="Shop" className="img-fluid rounded blur" />
           </div>
         </div>
       </div>

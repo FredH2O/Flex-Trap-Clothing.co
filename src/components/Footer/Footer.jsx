@@ -60,6 +60,7 @@ export default function Footer() {
                   href="https://twitter.com"
                   target="_blank"
                   className="text-decoration-none"
+                  rel="noreferrer"
                 >
                   Twitter
                 </a>
@@ -70,6 +71,7 @@ export default function Footer() {
                   href="https://facebook.com"
                   target="_blank"
                   className="text-decoration-none"
+                  rel="noreferrer"
                 >
                   Facebook
                 </a>
@@ -80,6 +82,7 @@ export default function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   className="text-decoration-none"
+                  rel="noreferrer"
                 >
                   Instagram
                 </a>
@@ -90,6 +93,7 @@ export default function Footer() {
                   href="https://linkedin.com"
                   target="_blank"
                   className="text-decoration-none"
+                  rel="noreferrer"
                 >
                   LinkedIn
                 </a>
@@ -98,7 +102,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="m-0 pt-5 text-center text-white">
-          <a href="https://github.com/FredH2O" target="_blank">
+          <a href="https://github.com/FredH2O" target="_blank" rel="noreferrer">
             FredH2O / 2024
           </a>
         </p>
