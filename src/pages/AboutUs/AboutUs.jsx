@@ -3,10 +3,7 @@ import aboutUs from "../../images/flex-trap-clothing.jpg";
 
 export default function AboutUs() {
   return (
-    <section
-      id="about-us"
-      className="py-5 bg-light animate__animated animate__fadeIn"
-    >
+    <section id="about-us" className="py-5 animate__animated animate__fadeIn">
       <div className="container">
         <div className="row about-us">
           <div className="col-lg-6">

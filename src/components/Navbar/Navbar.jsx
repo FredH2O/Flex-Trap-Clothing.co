@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
+import DarkModeToggle from "../DarkModeToggle";
 
 export default function Navbar({ cart, setCart }) {
   const [signIn, setSignIn] = useState(false);
@@ -88,6 +89,7 @@ export default function Navbar({ cart, setCart }) {
               </li>
             </ul>
             <form className="d-flex">
+              <DarkModeToggle />
               <button
                 onClick={handleSignIn}
                 className={`btn ${signIn ? "btn-danger" : "btn-outline-dark"}`}

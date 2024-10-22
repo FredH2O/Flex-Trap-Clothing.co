@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap");
+
 html,
 body {
   height: 100%; /* Ensure the body takes the full height of the viewport */
   margin: 0; /* Remove default margin */
-}
-
-body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,10 +11,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.light-mode {
+  background-color: white; /* Light mode background */
+  color: black; /* Light mode text color */
+  transition: 1s ease;
+}
+
+body.dark-mode {
+  background-color: #121212; /* Dark mode background */
+  color: white; /* Dark mode text color */
+  transition: 1s ease;
+}
+
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* Full height for the root element */
 }
 
 code {
