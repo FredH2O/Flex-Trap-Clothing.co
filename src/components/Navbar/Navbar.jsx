@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "../DarkMode/DarkModeToggle";
 
 export default function Navbar({ cart, setCart }) {
   const [signIn, setSignIn] = useState(false);

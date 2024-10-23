@@ -9,6 +9,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import Sale from "./pages/Sale/Sale";
+import { DarkModeProvider } from "./components/DarkMode/DarkModeContext";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -18,30 +19,32 @@ function App() {
 
   console.log(cart);
   return (
-    <Router>
-      <Navbar cart={cart} setCart={setCart} />
-      <main id="root">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Section onAddToCart={handleAddToCart} />
-              </>
-            }
-          />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contacts" element={<Contacts />} />
-          <Route
-            path="/sale"
-            element={<Sale onAddToCart={handleAddToCart} />}
-          />
-          <Route path="/thankyou" element={<ThankYou />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <DarkModeProvider>
+      <Router>
+        <Navbar cart={cart} setCart={setCart} />
+        <main id="root">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <Section onAddToCart={handleAddToCart} />
+                </>
+              }
+            />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contacts" element={<Contacts />} />
+            <Route
+              path="/sale"
+              element={<Sale onAddToCart={handleAddToCart} />}
+            />
+            <Route path="/thankyou" element={<ThankYou />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </DarkModeProvider>
   );
 }
 
