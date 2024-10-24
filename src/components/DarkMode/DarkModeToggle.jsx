@@ -1,17 +1,18 @@
 import { useDarkMode } from "./DarkModeContext";
+import { Classic } from "@theme-toggles/react";
+import "./DarkModeToggle.css";
 
-const DarkModeToggle = () => {
+function DarkModeToggle() {
   const { isDarkMode, setIsDarkMode } = useDarkMode();
-  console.log("Dark mode is:", isDarkMode);
+
   return (
-    <button
-      className="btn btn-outline-dark"
-      onClick={() => setIsDarkMode(!isDarkMode)}
-      style={{ padding: "10px", cursor: "pointer" }}
-    >
-      {isDarkMode ? "Light" : "Dark"}
-    </button>
+    <Classic
+      className="toggle-btn"
+      toggled={isDarkMode}
+      toggle={setIsDarkMode}
+      duration={1000}
+    />
   );
-};
+}
 
 export default DarkModeToggle;

@@ -13,13 +13,13 @@ body {
 }
 
 body.light-mode {
-  background-color: white !important;
-  color: black !important;
+  background-color: white;
+  color: black;
 }
 
 body.dark-mode {
-  background-color: #121212 !important;
-  color: white !important;
+  background-color: #121212;
+  color: white;
 }
 
 .modal-content {
