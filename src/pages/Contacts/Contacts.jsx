@@ -1,6 +1,15 @@
+import { useState } from "react";
 import "./Contacts.css";
 
 function Contacts() {
+  const [sent, setSent] = useState(false);
+
+  function handleOnClick() {
+    setSent(true);
+    setTimeout(() => {
+      setSent(false);
+    }, 1000);
+  }
   return (
     <div className="container contacts py-5">
       <div className="row">
@@ -74,6 +83,13 @@ function Contacts() {
                 rows="5"
                 maxLength="120"
               ></textarea>
+              <button
+                onClick={handleOnClick}
+                type="button"
+                class="btn btn-primary mt-3"
+              >
+                {sent ? "Message Sent!" : "Submit"}
+              </button>
             </div>
           </form>
         </div>
