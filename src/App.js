@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import Privacy from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
+import CookieBanner from "./components/CookieBanner/CookieBanner";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
@@ -19,10 +20,10 @@ function App() {
     setCart([...cart, product]);
   }
 
-  console.log(cart);
   return (
     <DarkModeProvider>
       <Router>
+        <CookieBanner />
         <Navbar cart={cart} setCart={setCart} />
         <main id="root">
           <Routes>
