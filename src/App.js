@@ -5,6 +5,8 @@ import Section from "./components/Section/Section";
 import Footer from "./components/Footer/Footer";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import ThankYou from "./pages/ThankYou/ThankYou";
+import Privacy from "./pages/Privacy/Privacy";
+import Terms from "./pages/Terms/Terms";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
@@ -40,6 +42,8 @@ function App() {
               element={<Sale onAddToCart={handleAddToCart} />}
             />
             <Route path="/thankyou" element={<ThankYou />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />
