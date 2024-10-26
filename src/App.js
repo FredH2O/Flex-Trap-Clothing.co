@@ -25,10 +25,11 @@ function App() {
       <Router>
         <CookieBanner />
         <Navbar cart={cart} setCart={setCart} />
+
         <main id="root">
           <Routes>
             <Route
-              path="/"
+              path="/home"
               element={
                 <>
                   <Header />

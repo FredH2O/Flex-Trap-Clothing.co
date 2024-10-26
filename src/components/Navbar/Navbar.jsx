@@ -73,7 +73,7 @@ export default function Navbar({ cart, setCart }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
               <li className="nav-item">
-                <Link className="nav-link active" to="/">
+                <Link className="nav-link active" to="/home">
                   Home
                 </Link>
               </li>
