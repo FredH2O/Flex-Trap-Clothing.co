@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Flex-Trap-Clothing.co/static/css/main.9ad339bd.css",
+    "main.js": "/Flex-Trap-Clothing.co/static/js/main.9ab843d9.js",
+    "static/js/453.c2a258ca.chunk.js": "/Flex-Trap-Clothing.co/static/js/453.c2a258ca.chunk.js",
+    "static/media/flex-trap-clothing.jpg": "/Flex-Trap-Clothing.co/static/media/flex-trap-clothing.542c8f580d21aae4551a.jpg",
+    "static/media/bootstrap-icons.woff?": "/Flex-Trap-Clothing.co/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/Flex-Trap-Clothing.co/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/playfair-display-latin-400-normal.woff": "/Flex-Trap-Clothing.co/static/media/playfair-display-latin-400-normal.9c7c1543d792cb6bb2b2.woff",
+    "static/media/playfair-display-latin-400-normal.woff2": "/Flex-Trap-Clothing.co/static/media/playfair-display-latin-400-normal.01127cbe42de896f8511.woff2",
+    "static/media/playfair-display-latin-ext-400-normal.woff": "/Flex-Trap-Clothing.co/static/media/playfair-display-latin-ext-400-normal.9ea2943ecdca370550c2.woff",
+    "static/media/flex-trap-logo.png": "/Flex-Trap-Clothing.co/static/media/flex-trap-logo.3cccbc2318e77f2db051.png",
+    "static/media/playfair-display-cyrillic-400-normal.woff": "/Flex-Trap-Clothing.co/static/media/playfair-display-cyrillic-400-normal.e8f79ad5a76821f7165f.woff",
+    "static/media/playfair-display-latin-ext-400-normal.woff2": "/Flex-Trap-Clothing.co/static/media/playfair-display-latin-ext-400-normal.ec5b9e3c4c997f6bac35.woff2",
+    "static/media/playfair-display-cyrillic-400-normal.woff2": "/Flex-Trap-Clothing.co/static/media/playfair-display-cyrillic-400-normal.3dc94a1021075fd54b85.woff2",
+    "static/media/playfair-display-vietnamese-400-normal.woff": "/Flex-Trap-Clothing.co/static/media/playfair-display-vietnamese-400-normal.40221529e528ff3e5a46.woff",
+    "static/media/playfair-display-vietnamese-400-normal.woff2": "/Flex-Trap-Clothing.co/static/media/playfair-display-vietnamese-400-normal.5c877b3fa47066dbb461.woff2",
+    "index.html": "/Flex-Trap-Clothing.co/index.html",
+    "main.9ad339bd.css.map": "/Flex-Trap-Clothing.co/static/css/main.9ad339bd.css.map",
+    "main.9ab843d9.js.map": "/Flex-Trap-Clothing.co/static/js/main.9ab843d9.js.map",
+    "453.c2a258ca.chunk.js.map": "/Flex-Trap-Clothing.co/static/js/453.c2a258ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ad339bd.css",
+    "static/js/main.9ab843d9.js"
+  ]
+}
