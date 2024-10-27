@@ -29,7 +29,7 @@ function App() {
         <main id="root">
           <Routes>
             <Route
-              path="/home"
+              path="/"
               element={
                 <>
                   <Header />
