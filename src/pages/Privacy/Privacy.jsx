@@ -58,7 +58,7 @@ function Privacy() {
           </div>
           <div className="col-lg-6">
             <img
-              src="/images/privacy.png"
+              src={`${process.env.PUBLIC_URL}/images/privacy.png`}
               alt="Shop"
               className="img-fluid rounded blur"
             />

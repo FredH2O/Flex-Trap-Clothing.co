@@ -5,7 +5,7 @@ function Terms() {
         <div className="row about-us">
           <div className="col-lg-6">
             <img
-              src="/images/terms.png"
+              src={`${process.env.PUBLIC_URL}/images/terms.png`}
               alt="Shop"
               className="img-fluid rounded blur"
             />

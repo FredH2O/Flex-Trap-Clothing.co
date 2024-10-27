@@ -9,7 +9,12 @@ import Privacy from "./pages/Privacy/Privacy";
 import Terms from "./pages/Terms/Terms";
 import CookieBanner from "./components/CookieBanner/CookieBanner";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Contacts from "./pages/Contacts/Contacts";
 import Sale from "./pages/Sale/Sale";
 import { DarkModeProvider } from "./components/DarkMode/DarkModeContext";
@@ -36,7 +41,6 @@ function App() {
                   <Section onAddToCart={handleAddToCart} />
                 </>
               }
-              index
             />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contacts" element={<Contacts />} />
@@ -47,6 +51,7 @@ function App() {
             <Route path="/thankyou" element={<ThankYou />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
         <Footer />
