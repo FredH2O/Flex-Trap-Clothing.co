@@ -36,6 +36,7 @@ function App() {
                   <Section onAddToCart={handleAddToCart} />
                 </>
               }
+              index
             />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contacts" element={<Contacts />} />
